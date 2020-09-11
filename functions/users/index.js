@@ -1,4 +1,5 @@
 const Profile = require('../../models/Profile')
+
 module.exports ={ 
     handleGet : (req,res)=>{
               res.send('accepted response')

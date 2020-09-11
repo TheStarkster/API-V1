@@ -4,7 +4,9 @@ const schema = new mongoose.Schema({
     name:String,
     phone:Number,
     email:String,
-    password:String
+    password:String,
+    googleId:String,
+    facebookId:String
 
 });
 
