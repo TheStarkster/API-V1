@@ -4,6 +4,7 @@ const app=express()
 const mongoose=require("mongoose")
 const MongoClient = require('mongodb').MongoClient
 require('dotenv').config()
+<<<<<<< HEAD
 const cookieSession = require('cookie-session')
 const passport = require('passport')
 require('./routers/v1/users/googleAuth')
@@ -17,6 +18,11 @@ app.use(cookieSession({
 
 app.use(passport.initialize());
 app.use(passport.session());
+=======
+
+const PORT = process.env.PORT||3000
+
+>>>>>>> 4110ed2b8e3a6cb6bc0ac09ba99712dabd0807ff
 
 mongoose.connect(process.env.DB_URI,{ useNewUrlParser: true , useUnifiedTopology: true})
   .then(() => console.log('MongoDB Connected'))

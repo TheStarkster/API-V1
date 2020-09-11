@@ -1,5 +1,8 @@
 const Profile = require('../../models/Profile')
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4110ed2b8e3a6cb6bc0ac09ba99712dabd0807ff
 module.exports ={ 
     handleGet : (req,res)=>{
               res.send('accepted response')
