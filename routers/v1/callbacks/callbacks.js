@@ -4,8 +4,9 @@ const passport = require("passport");
 router.get(
   "/facebook",
   passport.authenticate("facebook", {
-    successRedirect: "/success",
-    failureRedirect: "/fail",
+    successRedirect: "/v1/callback/success",
+    failureRedirect: "/v1/callback/fail",
+    session: false,
   })
 );
 
