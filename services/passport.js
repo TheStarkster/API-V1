@@ -1,6 +1,7 @@
 const facebookStrategy = require("passport-facebook").Strategy;
 const passport = require("passport");
-require("dotenv").config()
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
 passport.use(
   new facebookStrategy(
     {
@@ -17,7 +18,11 @@ passport.use(
       ],
     },
     function (token, refreshToken, profile, done) {
-      if  (profile)  {
+      if (profile !== null) {
+        //save user details in database from "profile" object...
+        let user = { _id: 123 };
+        const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
+        console.log(accessToken);
         done(null, true);
       }
     }

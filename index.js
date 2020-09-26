@@ -6,7 +6,7 @@ require("dotenv").config();
 const passport = require("passport");
 
 //requiring facebook strategy...
-require("./functions/auth/passport");
+require("./services/passport");
 
 const PORT = process.env.PORT || 9000;
 
