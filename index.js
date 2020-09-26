@@ -2,31 +2,27 @@ const express= require("express")
 const bodyParser = require("body-parser")
 const app=express()
 const mongoose=require("mongoose")
-const MongoClient = require('mongodb').MongoClient
-require('dotenv').config()
-<<<<<<< HEAD
+require("dotenv").config();
 const cookieSession = require('cookie-session')
-const passport = require('passport')
-require('./routers/v1/users/googleAuth')
+const passport = require("passport");
 
-const PORT = process.env.PORT||3000
+//requiring facebook strategy...
+require("./functions/auth/passport");
+
+const PORT = process.env.PORT || 9000;
 
 app.use(cookieSession({
   name: 'test',
   keys: ['key1', 'key2']
 }))
 
+//passport configs...
 app.use(passport.initialize());
 app.use(passport.session());
-=======
 
-const PORT = process.env.PORT||3000
-
->>>>>>> 4110ed2b8e3a6cb6bc0ac09ba99712dabd0807ff
-
-mongoose.connect(process.env.DB_URI,{ useNewUrlParser: true , useUnifiedTopology: true})
-  .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log(err));
+// mongoose.connect(process.env.DB_URI,{ useNewUrlParser: true , useUnifiedTopology: true})
+//   .then(() => console.log('MongoDB Connected'))
+//   .catch(err => console.log(err));
 
 
 app.use(bodyParser.json())

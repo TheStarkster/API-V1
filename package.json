@@ -11,7 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
-<<<<<<< HEAD
     "cookie-session": "^1.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -20,12 +19,6 @@
     "passport": "^0.4.1",
     "passport-facebook": "^3.0.0",
     "passport-google-oauth20": "^2.0.0"
-=======
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "mongodb": "^3.6.1",
-    "mongoose": "^5.10.2"
->>>>>>> 4110ed2b8e3a6cb6bc0ac09ba99712dabd0807ff
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

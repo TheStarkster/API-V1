@@ -1,11 +1,14 @@
 const router= require("express").Router()
+const Auth = require("./auth/auth");
+const Callback = require("./callbacks/callbacks");
 
 //user handlers...
-router.use('/user', require('./users/profile'))
-<<<<<<< HEAD
-router.use('/user',require('./path-oAuth'))
-router.use('/user',require('./path-fb'))
-=======
->>>>>>> 4110ed2b8e3a6cb6bc0ac09ba99712dabd0807ff
+// router.use("/user", require("./users/profile"));
+
+//authentication handlers...
+router.use("/authenticate", Auth)
+
+//callbacks...
+router.use("/callback", Callback)
 
 module.exports = router
