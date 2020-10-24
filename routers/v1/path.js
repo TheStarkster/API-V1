@@ -3,7 +3,8 @@ const Auth = require("./auth/auth");
 const Callback = require("./callbacks/callbacks");
 
 //user handlers...
-router.use("/user", require("./users/profile"));
+router.use("/user/profile", require("./users/profile"));
+router.use("/user/post", require("./users/posts"));
 
 //authentication handlers...
 router.use("/authenticate", Auth);
